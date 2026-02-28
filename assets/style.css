@@ -1,0 +1,303 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --text: #333;
+    --text-light: #555;
+    --bg: #fff;
+    --bg-light: #f8f9fa;
+    --border: #e0e0e0;
+    --max-width: 860px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--bg);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header / Navigation */
+header {
+    background: var(--primary);
+    color: #fff;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+}
+
+nav .site-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.9rem 0;
+    margin-right: 2rem;
+    white-space: nowrap;
+}
+
+nav .site-title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: rgba(255,255,255,0.85);
+    padding: 0.9rem 1rem;
+    display: block;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #fff;
+}
+
+/* Hamburger */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+}
+
+/* Main content */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Home page hero */
+.hero {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.hero-photo {
+    width: 200px;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.hero-text h1 {
+    margin-bottom: 0.5rem;
+}
+
+.hero-text .subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.profiles {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    line-height: 1.8;
+}
+
+.contact {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* Publication / Talk list */
+.pub-year {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.2rem;
+}
+
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-list li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--bg-light);
+    line-height: 1.5;
+}
+
+.pub-list li:hover {
+    border-left-color: var(--accent);
+}
+
+.pub-title {
+    font-weight: 500;
+}
+
+.pub-venue {
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.pub-details {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Teaching */
+.course-list {
+    list-style: none;
+    padding: 0;
+}
+
+.course-list li {
+    padding: 0.6rem 0 0.6rem 1rem;
+    border-left: 3px solid var(--bg-light);
+    margin-bottom: 0.5rem;
+}
+
+.course-list li:hover {
+    border-left-color: var(--accent);
+}
+
+.course-name {
+    font-weight: 500;
+}
+
+.course-years {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.course-type {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* CV page */
+.cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.2s;
+    margin-top: 1rem;
+}
+
+.cv-download:hover {
+    background: #2980b9;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-photo {
+        width: 160px;
+        min-width: 160px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li a {
+        padding: 0.7rem 0;
+    }
+}
